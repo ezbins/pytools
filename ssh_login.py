@@ -6,8 +6,8 @@ import getpass
 ssh = pxssh.pxssh()
 
 #passwd = getpass.getpass()
-ssh.login('192.168.1.125','root','999ibm')
-ssh.sendline('pidof java')
+ssh.login('52.74.188.31','root',ssh_key="/home/shao/.ssh/cobain-singapore.pem")
+ssh.sendline('date')
 ssh.prompt()
 print(ssh.before.decode('utf-8'))
 ssh.logout()
